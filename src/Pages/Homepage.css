@@ -1,0 +1,72 @@
+.container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  overflow: hidden;
+}
+.inner {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow: hidden;
+}
+.backgroundImage {
+  width: 50%;
+  background-image: url("interact.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.clickableDivsContainer {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.clickableDiv {
+  background-color: #3498db;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+}
+
+.clickableDiv:hover {
+  background-color: #c9c969;
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 115, 255, 0.3);
+}
+
+.ribbon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  width: 100%;
+  background-color: #f1c40f;
+  height: 40px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.ribbon {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: ticker 20s linear infinite;
+  text-indent: 100%;
+}
+
+@keyframes ticker {
+  0% {
+    text-indent: 100%;
+  }
+  100% {
+    text-indent: -100%;
+  }
+}
